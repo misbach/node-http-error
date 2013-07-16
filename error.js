@@ -2,7 +2,7 @@ var util = require("util");
 
 exports.HttpError = function(message, code) {
     Error.call(this, message);
-    //Error.captureStackTrace(this, arguments.callee);
+    Error.captureStackTrace(this, arguments.callee);
     this.message = message;
     this.code = code;
     this.augment = null;
